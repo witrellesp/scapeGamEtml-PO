@@ -10,7 +10,7 @@
 </template>
 <style>
 body {
-  /*Color de fond*/
+  /*Couleur de fond*/
   background-color: #001780;
 }
 </style>
