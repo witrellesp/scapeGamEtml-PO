@@ -17,7 +17,6 @@ body.challenge2-page {
 </style>
 
 <script setup>
-
 import { onMounted, onBeforeUnmount, ref } from 'vue'
 
 const couleurFond = '#45d620'

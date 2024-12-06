@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import PageAccueil from '@/views/PageAccueil.vue'
-import Challenge1 from '@/views/Challenge1.vue'
-import Challenge2 from '@/views/Challenge2.vue'
-import Challenge3 from '@/views/Challenge3.vue'
-import Challenge4 from '@/views/Challenge4.vue'
+import ChallengeOne from '@/views/1ChallengeOne.vue'
+import ChallengeTwo from '@/views/2ChallengeTwo.vue'
+import ChallengeThree from '@/views/3ChallengeThree.vue'
+import ChallengeFour from '@/views/4ChallengeFour.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,25 +17,25 @@ const router = createRouter({
     {
       path: '/challenge1',
       name: 'challenge1',
-      component: Challenge1,
+      component: ChallengeOne,
     },
-    ,
+
     {
       path: '/challenge2',
       name: 'challenge2',
-      component: Challenge2,
+      component: ChallengeTwo,
     },
-    ,
+
     {
       path: '/challenge3',
       name: 'challenge3',
-      component: Challenge3,
+      component: ChallengeThree,
     },
-    ,
+
     {
       path: '/challenge4',
       name: 'challenge4',
-      component: Challenge4,
+      component: ChallengeFour,
     },
     {
       path: '/about',
