@@ -10,13 +10,14 @@
 </template>
 
 <style scoped>
-/* Estilo solo para este componente */
+/* Style for this component */
 body.challenge2-page {
   background-color: #45d620;
 }
 </style>
 
 <script setup>
+
 import { onMounted, onBeforeUnmount, ref } from 'vue'
 
 const couleurFond = '#45d620'

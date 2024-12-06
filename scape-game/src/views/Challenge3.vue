@@ -7,11 +7,13 @@
 <p>CLICKEZ SUR LES COULEURS DANS LE BON ORDRE</p>
 
 
-    <div class="square red" onclick="alert('Carré rouge cliqué!')"></div>
-    <div class="square green" onclick="alert('Carré vert cliqué!')"></div>
-    <div class="square blue" onclick="alert('Carré bleu cliqué!')"></div>
+    <div class="square red" @click="handleClick('red')"></div>
+    <div class="square green" @click="handleClick('green')"></div>
+    <div class="square blue" @click="handleClick('blue')"></div>
 
-
+    <div v-if="successMessage">
+        <button><RouterLink to="/challenge4">Next challenge</RouterLink></button>
+  </div>
 
 </template>
 
@@ -32,9 +34,33 @@
         .blue {
             background-color: blue;
         }
+        .message {
+            margin-top: 20px;
+            font-size: 20px;
+            color: green;
+            display: none;
+        }
+        .show-message {
+            display: block;
+        }
 </style>
 <script setup>
+import {  ref } from 'vue'
+const secretCombination = ['red', 'green', 'blue'];
+const userInput = ref([]);
+const successMessage = ref(false);
 
+function handleClick(color) {
+  // Ajouter la couleur cliquée au tableau des entrées utilisateur
+  userInput.value.push(color);
 
+  // Vérifier si la séquence est correcte
+  if (userInput.value[userInput.value.length - 1] !== secretCombination[userInput.value.length - 1]) {
+    alert("Mauvais ordre ! Essayez encore.");
+    userInput.value = []; // Réinitialiser si erreur
+  } else if (userInput.value.length === secretCombination.length) {
+    successMessage.value = true; // Afficher le message de succès
+    alert("Bon ordre. Félicitations");
+  }}
 
 </script>
