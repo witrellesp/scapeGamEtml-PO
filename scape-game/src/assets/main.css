@@ -1,29 +1,112 @@
 @import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+/* Styles globaux */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212; /* Fond sombre pour l'immersion */
+  color: #f5f5f5; /* Texte clair */
+  margin: 0;
+  padding: 0;
 }
 
-a,
-.green {
+/* Header */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #45d620; /* Couleur verte vive */
+  margin-top: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Formulaire */
+form {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+label {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  border: 2px solid #45d620;
+  border-radius: 5px;
+  background: #121212;
+  color: #f5f5f5;
+}
+
+input[type="text"]:focus {
+  border-color: #a5ff83;
+  outline: none;
+  box-shadow: 0 0 8px #45d620;
+}
+
+/* Boutons */
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #121212;
+  background-color: #45d620;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #a5ff83;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+/* Liens vers d'autres challenges */
+a {
   text-decoration: none;
-  color: rgb(199, 56, 46);
-  transition: 0.4s;
-  padding: 3px;
+  color: #121212;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(0, 100%, 65%, 0.973);
+a:hover {
+  text-decoration: underline;
+}
+
+/* Boîte d'indice */
+#hintBox {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+  border: 2px dashed #45d620;
+  border-radius: 5px;
+  background: #1e1e1e;
+  color: #a5ff83;
+  font-style: italic;
+  display: none; /* Cacher par défaut */
+}
+
+/* Transitions et animations */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
+  to {
+    opacity: 1;
   }
 }

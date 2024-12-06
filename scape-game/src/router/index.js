@@ -5,6 +5,7 @@ import ChallengeOne from '@/views/1ChallengeOne.vue'
 import ChallengeTwo from '@/views/2ChallengeTwo.vue'
 import ChallengeThree from '@/views/3ChallengeThree.vue'
 import ChallengeFour from '@/views/4ChallengeFour.vue'
+import ChallengeFive from '@/views/5ChallengeFive.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -36,6 +37,11 @@ const router = createRouter({
       path: '/challenge4',
       name: 'challenge4',
       component: ChallengeFour,
+    },
+    {
+      path: '/endGame',
+      name: 'endGame',
+      component: ChallengeFive,
     },
     {
       path: '/about',
