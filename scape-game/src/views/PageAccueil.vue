@@ -1,3 +1,7 @@
+<!------------------>
+<!--Page d'accueil-->
+<!------------------>
+
 <script setup>
 import { ref } from 'vue'
 const clickCount = ref(0)

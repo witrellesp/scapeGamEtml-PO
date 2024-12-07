@@ -61,5 +61,6 @@ L'utilisateur doit chercher la combinaison sécrète dans le code est ensuite r�
 Définition sur ce qui est un array/tableau à quoi ça sert et comment il est utilisé dans ce cas.
 
 5.Challenge 4 - Heure à saisir
-Ici l'utilisateur doit chercher l'heure indiqué dans le code pour la saisir dans l'interface
+Ici l'utilisateur doit chercher l'heure indiqué dans le code pour la saisir dans l'interface et trouver un mot qui lui servira
+à finir le jeu
 Explication sur le type de champs qui existent dans le html

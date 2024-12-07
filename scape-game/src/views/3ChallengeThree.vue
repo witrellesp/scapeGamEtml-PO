@@ -1,3 +1,6 @@
+<!------------------>
+<!--Challenge 3-->
+<!------------------>
 <script setup>
 import { ref } from 'vue'
 //Combinaison des couleurs
