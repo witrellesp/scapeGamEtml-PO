@@ -3,7 +3,7 @@
 <!------------------>
 <script setup>
 import { ref } from 'vue'
-//Combinaison des couleurs
+
 const secretCombination = ['red', 'blue', 'green']
 const userInput = ref([])
 const successMessage = ref(false)

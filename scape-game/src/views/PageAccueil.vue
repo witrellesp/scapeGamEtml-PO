@@ -1,10 +1,7 @@
-<!------------------>
-<!--Page d'accueil-->
-<!------------------>
-
 <script setup>
 import { ref } from 'vue'
 const clickCount = ref(0)
+
 function incrementAccount() {
   clickCount.value++
 }
@@ -37,9 +34,9 @@ function incrementAccount() {
       </p>
     </div>
 
-    <!--BOUTON CACHE-->
-
-    <!--<button><RouterLink to="/challenge1">Next challenge</RouterLink></button>-->
+    <!--
+      <button><RouterLink to="/challenge1">Next challenge</RouterLink></button>
+    -->
   </main>
 </template>
 
