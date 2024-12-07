@@ -4,6 +4,7 @@
 body {
   font-family: 'Arial', sans-serif;
   background-color: #121212; /* Fond sombre pour l'immersion */
+  font-size: x-large;
   color: #f5f5f5; /* Texte clair */
   margin: 0;
   padding: 0;
@@ -12,6 +13,7 @@ body {
 /* Header */
 h1 {
   text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 2.5rem;
   color: #45d620; /* Couleur verte vive */
   margin-top: 20px;
@@ -34,7 +36,7 @@ label {
   display: block;
 }
 
-input[type="text"] {
+input[type='text'] {
   width: 100%;
   padding: 10px;
   font-size: 1rem;
@@ -45,7 +47,7 @@ input[type="text"] {
   color: #f5f5f5;
 }
 
-input[type="text"]:focus {
+input[type='text']:focus {
   border-color: #a5ff83;
   outline: none;
   box-shadow: 0 0 8px #45d620;
@@ -61,7 +63,9 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
 button:hover {

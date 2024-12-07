@@ -4,6 +4,7 @@
     Le Dr. Code a caché une clé dans un champ de formulaire. Pour la trouver, vous devez remplir le
     formulaire correctement.
   </p>
+
   <form action="">
     <label for="keyword">Entrez le mot secret</label><br />
     <input type="text" id="keywordInput" v-model="keywordInput" /><br />
@@ -15,7 +16,8 @@
 
 <script setup>
 import { ref } from 'vue'
-//mot secret
+
+//Ce ici que le Dr. code à caché le mot secret
 const motSecret = 'informatique'
 
 const keywordInput = ref('')

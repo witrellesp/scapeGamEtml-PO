@@ -41,8 +41,8 @@ const motSecret = 'EndGame' // Le mot secret à deviner
 
 // Fonction pour vérifier si l'heure est correcte
 function checkTime() {
-  // L'heure secrète est 14:30
-  if (parseInt(hours.value) === 14 && parseInt(minutes.value) === 30) {
+  // L'heure secrète est établie ici 16h20
+  if (parseInt(hours.value) === 16 && parseInt(minutes.value) === 20) {
     showHint.value = true
   } else {
     alert("Ce n'est pas la bonne heure. Essayez encore!")

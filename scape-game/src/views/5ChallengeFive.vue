@@ -2,36 +2,37 @@
   <div class="end-game-container">
     <h1>🎉 Félicitations ! 🎉</h1>
     <p class="message">
-      Vous avez complété tous les défis avec succès. Votre esprit logique et votre persévérance sont impressionnants !
+      Vous avez complété tous les défis avec succès. Votre esprit logique et votre persévérance sont
+      impressionnants !
     </p>
- 
-
   </div>
 </template>
 
 <script setup>
-import { useRouter } from "vue-router";
+import { useRouter } from 'vue-router'
 
-const router = useRouter();
+const router = useRouter()
 
 // Fonction pour redémarrer le jeu
 const restartGame = () => {
-  router.push("/"); // Redirige vers la première page
-};
+  router.push('/') // Redirige vers la première page
+}
 
 // Fonction pour partager le jeu
 const shareGame = () => {
-  const shareText = "J'ai terminé cet escape game incroyable ! Essayez-le ici : [lien du jeu]";
+  const shareText = "J'ai terminé cet escape game incroyable ! Essayez-le ici : [lien du jeu]"
   if (navigator.share) {
-    navigator.share({
-      title: "Escape Game",
-      text: shareText,
-      url: window.location.href,
-    }).catch((err) => console.log("Partage annulé ou échoué : ", err));
+    navigator
+      .share({
+        title: 'Escape Game',
+        text: shareText,
+        url: window.location.href,
+      })
+      .catch((err) => console.log('Partage annulé ou échoué : ', err))
   } else {
-    alert("Copiez ce lien pour le partager : [lien du jeu]");
+    alert('Copiez ce lien pour le partager : [lien du jeu]')
   }
-};
+}
 </script>
 
 <style scoped>

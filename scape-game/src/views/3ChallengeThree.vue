@@ -1,11 +1,13 @@
 <script setup>
 import { ref } from 'vue'
-const secretCombination = ['red', 'green', 'blue']
+//Combinaison des couleurs
+const secretCombination = ['red', 'blue', 'green']
 const userInput = ref([])
 const successMessage = ref(false)
 
 function handleClick(color) {
   // Ajouter la couleur cliquée au tableau des entrées utilisateur
+
   userInput.value.push(color)
 
   // Vérifier si la séquence est correcte

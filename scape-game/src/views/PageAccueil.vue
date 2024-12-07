@@ -34,9 +34,8 @@ function incrementAccount() {
     </div>
 
     <!--BOUTON CACHE-->
-    <!--
-      <button><RouterLink to="/challenge1">Next challenge</RouterLink></button>
-    -->
+
+    <!--<button><RouterLink to="/challenge1">Next challenge</RouterLink></button>-->
   </main>
 </template>
 
