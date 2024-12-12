@@ -6,10 +6,16 @@
   <form @submit.prevent="verifierCouleur">
     <label for="colorBackground">Quelle est la couleur de fond?</label>
     <br />
-    <input type="text" id="inputColor" v-model="inputColor" :placeholder="placeholderText" />
+    <input
+      type="text"
+      id="inputColor"
+      v-model="inputColor"
+      :placeholder="placeholderText"
+      autocomplete="off"
+    />
 
     <button type="submit" v-if="inputColor === couleurFond">
-      <RouterLink to="/challenge3">Next challenge</RouterLink>
+      <RouterLink to="/game/challenge3" class="btnSubmit">Next challenge</RouterLink>
     </button>
     <p v-if="messageErreur">{{ messageErreur }}</p>
   </form>
@@ -17,7 +23,7 @@
 
 <style>
 body.challenge2-page {
-  background-color: #45d620 !important;
+  background-color: #981edf !important;
 }
 </style>
 <style scoped>
@@ -25,17 +31,20 @@ h1 {
   text-align: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 2.5rem;
-  color: #d6209f; /* Couleur verte vive */
+  color: #d6209f;
   margin-top: 20px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.btnSubmit {
+  color: black;
 }
 </style>
 
 <script setup>
 import { onMounted, onBeforeUnmount, ref } from 'vue'
 
-//Couleur de fond
-const couleurFond = '#45d620'
+/*Couleur du fond*/
+const couleurFond = '#981edf'
 
 const inputColor = ref('')
 const tentatives = ref(0)

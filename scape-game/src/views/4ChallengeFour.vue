@@ -26,7 +26,7 @@
 
       <!-- Bouton pour accéder au défi suivant -->
       <button v-if="keywordInput === motSecret">
-        <RouterLink to="/endGame">Next challenge</RouterLink>
+        <RouterLink to="/game/endGame">Next challenge</RouterLink>
       </button>
     </div>
   </div>

@@ -11,10 +11,10 @@
   <form action="">
     <label for="keyword">Entrez le mot secret</label><br />
 
-    <input type="text" id="keywordInput" v-model="keywordInput" /><br />
+    <input type="text" id="keywordInput" v-model="keywordInput" autocomplete="off" /><br />
 
     <button v-if="keywordInput == motSecret">
-      <RouterLink to="/challenge2">Next challenge</RouterLink>
+      <RouterLink to="/game/challenge2">Next challenge</RouterLink>
     </button>
   </form>
 </template>
@@ -26,3 +26,8 @@ const motSecret = 'informatique'
 
 const keywordInput = ref('')
 </script>
+<style scoped>
+a {
+  color: #000;
+}
+</style>

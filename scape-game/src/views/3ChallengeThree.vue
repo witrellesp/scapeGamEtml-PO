@@ -7,21 +7,21 @@ import { ref } from 'vue'
 const secretCombination = ['red', 'blue', 'green']
 const userInput = ref([])
 const successMessage = ref(false)
+const messageErreur = ref(false)
 
 function handleClick(color) {
   // Ajouter la couleur cliquée au tableau des entrées utilisateur
-
   userInput.value.push(color)
 
   // Vérifier si la séquence est correcte
-  if (
-    userInput.value[userInput.value.length - 1] !== secretCombination[userInput.value.length - 1]
-  ) {
-    alert('Mauvais ordre ! Essayez encore.')
-    userInput.value = [] // Réinitialiser si erreur
-  } else if (userInput.value.length === secretCombination.length) {
-    successMessage.value = true // Afficher le message de succès
-    alert('Bon ordre. Félicitations')
+  if (userInput.value.length === secretCombination.length) {
+    if (userInput.value.every((value, index) => value === secretCombination[index])) {
+      successMessage.value = true
+    } else {
+      messageErreur.value = true
+      alert('Mauvais ordre ! Essayez encore.')
+      userInput.value = []
+    }
   }
 }
 </script>
@@ -33,7 +33,7 @@ function handleClick(color) {
     couleurs dans l'ordre exact pour débloquer le défis suivant.
   </p>
   <br />
-  <p>Jetter un oeil au code du Challenge 3</p>
+
   <br />
   <div>
     <p>CLICKEZ SUR LES COULEURS DANS LE BON ORDRE</p>
@@ -43,8 +43,12 @@ function handleClick(color) {
     <div class="square green" @click="handleClick('green')"></div>
     <div class="square blue" @click="handleClick('blue')"></div>
 
+    <p v-if="messageErreur">Jetter un oeil au code du Challenge 3</p>
+
     <div v-if="successMessage">
-      <button><RouterLink to="/challenge4">Next challenge</RouterLink></button>
+      <button>
+        <RouterLink to="/game/challenge4" class="btnSubmit">Next challenge</RouterLink>
+      </button>
     </div>
   </div>
 </template>
@@ -74,5 +78,8 @@ function handleClick(color) {
 }
 .show-message {
   display: block;
+}
+.btnSubmit {
+  color: black;
 }
 </style>

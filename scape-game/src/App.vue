@@ -1,4 +1,11 @@
-<script setup>
+<script>
+import Timer from './components/Timer.vue'
+
+export default {
+  components: {
+    Timer,
+  },
+}
 //import { RouterLink, RouterView } from 'vue-router'
 </script>
 
@@ -12,7 +19,7 @@
       </nav>
     </div>
   </header>
-
+  <Timer />
   <RouterView />
 </template>
 
@@ -27,7 +34,7 @@
 a,
 .green {
   text-decoration: none;
-  color: rgb(199, 56, 46);
+  color: #45d620;
   transition: 0.4s;
   padding: 3px;
 }
